@@ -3,9 +3,9 @@
 	"thumbnail":"zinabar.png",
 	"screenshot":"zinabar.png",
     "tags": {
-    "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "gardening", "sans-serif", "gardener"],
-    "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "jardineria", "sans-serif", "jardinero"],
-    "br": ["minimalista", "limpo", "fotografia", "moderno", "colorido", "flexível", "aberto", "simples", "jardinagem", "sans-serif", "jardineiro"]
+    "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "restaurant", "sans-serif", "bar", "coffee shop", "cafe"],
+    "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "restaurante", "sans-serif", "bar", "cafetería"],
+    "br": ["minimalista", "limpo", "fotografia", "moderno", "colorido", "flexível", "aberto", "simples", "restaurante", "sans-serif", "bar", "café"]
     },
 	"colorSwatches":
     {

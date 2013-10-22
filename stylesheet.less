@@ -425,12 +425,14 @@ nav {
   text-align: center;
 }
 
-
-.widget.feature h2, .widget.feature h3 {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 90%;
-    margin: 0 auto;
+.widget.feature .content .spare {
+  display: block;
+  background-color: rgba(255,255,255,0.8);
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
 }
+
 
 /* FEATURE TITLE */
 
@@ -442,7 +444,6 @@ nav {
   color: darken(@font-swatch8-color,5%);
   letter-spacing: @font-swatch8-letter-spacing;
   text-transform: uppercase;
-  padding-top: 60px;
 }
 
 /* FEATURE STRAPLINE */
@@ -454,7 +455,6 @@ nav {
   line-height:bkscale(@font-swatch9-line-height,0.8);
   color: @font-swatch9-color;
   letter-spacing: @font-swatch9-letter-spacing;
-  padding-bottom: 80px;
 }
 
 /* FEATURE BUTTON */
@@ -463,8 +463,8 @@ nav {
   width: 50%;
   max-width: 50%;
   display: block;
-  margin: -25px auto;
-  padding: 0;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 
 .widget.feature button
@@ -1797,10 +1797,6 @@ footer .widget.profile .twitter span {
         vertical-align: middle;
     }
 
-    .widget.feature .content .spare {
-      display: inline;
-    }
-
     .widget.feature h2 {
         font-size: bkscale(@font-swatch8-font-size,0.8);
         line-height: bkscale(@font-swatch8-line-height,0.8);
@@ -1871,26 +1867,28 @@ footer .widget.profile .twitter span {
         padding: 0.5em 0;
     }
 
+    .widget.feature .content .spare {
+        padding: 20px;
+    }
+
     .widget.feature h2 {
         font-size: bkscale(@font-swatch8-font-size,0.6);
         line-height: bkscale(@font-swatch8-line-height,0.6);
         color: darken(@color-swatch3,10%);
-        width: 90%;
-        margin: 0 5%;
-        padding-top: 15px;
+        padding: 0 10px;  
+  
     }
 
     .widget.feature h3 {
         font-size: bkscale(@font-swatch9-font-size,0.65);
         line-height: bkscale(@font-swatch9-line-height,0.67);
-        width: 90%;
-        margin: 0 5%;
-        padding-bottom: 40px;
+        padding: 0 10px;     
     }
 
     .widget.feature .feature-btn {
       width: 100%;
       max-width: 100%;
+      padding-top: 20px;
     }
 
     .widget.feature .feature-btn button {

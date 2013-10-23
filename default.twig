@@ -24,9 +24,17 @@
 
 <footer>
     <div class="wrapper clearfix">
-        {{widget('content', 'footercolumn1content1', {"content":"<h4>CONTACT</h4>"})|raw}}              
-        {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
-        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+        <div class="responsivecolumns columns-two-50-50">
+           <div class="column columns-two-left">
+                {{widget('content', 'footercolumn1content1', {"content":"<h3>Lorem Ipsum Dolor</h3>"})|raw}}
+                {{widget('profile', 'footercolumn2profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
+           </div>
+           <div class="column columns-two-right">
+                {{widget('content', 'footercolumn2content1', {"content":"<h3>Pulvinar Vitae</h3>"})|raw}}
+                {{widget('profile', 'footercolumn2profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+                {{widget('profile', 'footercolumn2profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+           </div>
+        </div>
     </div>
 </footer>
 

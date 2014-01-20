@@ -264,16 +264,19 @@ nav {
   background-color: @color-swatch7;
 }
 
-.widget.extendednavigation {
+.widget .extendednavigation {
     text-align: left;
     position: relative;
     background-color: @color-swatch7;
+    float: none;
+    max-width: 100%;
 }
 
-.widget.extendednavigation ul {
+.widget .extendednavigation ul {
     display: table;
     margin: 0 auto;
     padding: 0;
+    float: none;
 }
 
 .widget.extendednavigation a.pull {
@@ -465,7 +468,7 @@ nav {
   padding-top: 30px;
 }
 
-.widget.feature button
+.widget.feature .feature-bgimg .content button
 {
   padding: 15px 25px;
   border: 2px solid @color-swatch6;
@@ -952,12 +955,12 @@ hr.line.align-right {
     background-color: @color-swatch1;
 }
 
-.widget.contactform fieldset {
+.widget.contactform form fieldset {
     border: none;
     padding: 0;
 }
 
-.widget.contactform fieldset label {
+.widget.contactform form fieldset label {
     width: 100%;
     float: left;
     font-family:@font-swatch5-font-family;
@@ -968,7 +971,7 @@ hr.line.align-right {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.contactform fieldset input {
+.widget.contactform form fieldset input {
     height: 40px;
     width: 100%;
     border: none;
@@ -982,12 +985,12 @@ hr.line.align-right {
     padding: 0;
 }
 
-.widget.contactform fieldset input:focus {
+.widget.contactform form fieldset input:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform fieldset textarea {
+.widget.contactform form fieldset textarea {
     height: 100px;
     width: 100%;
     border: none;
@@ -1003,12 +1006,12 @@ hr.line.align-right {
     padding: 0;
 }
 
-.widget.contactform fieldset textarea:focus {
+.widget.contactform form fieldset textarea:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform form fieldset button.btn {
     padding: 16px 22px;
     margin: 0;
     border: 2px solid @color-swatch6;
@@ -1021,32 +1024,32 @@ hr.line.align-right {
     letter-spacing: 1px;
 }
   
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform form fieldset button.btn:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
 }
 
-.widget.contactform fieldset button.btn.justifyleft {
+.widget.contactform form fieldset button.btn.justifyleft {
     text-align: left
 }
 
-.widget.contactform fieldset button.btn.justifycenter {
+.widget.contactform form fieldset button.btn.justifycenter {
     text-align: center
 }
 
-.widget.contactform fieldset button.btn.justifyright {
+.widget.contactform form fieldset button.btn.justifyright {
     text-align: right
 }
 
-.widget.contactform fieldset button.btn.justifyfull {
+.widget.contactform form fieldset button.btn.justifyfull {
     text-align: justify
 }
 
-.widget.contactform fieldset button.btn.italic {
+.widget.contactform form fieldset button.btn.italic {
     font-style: italic
 }
 
-.widget.contactform fieldset button.btn.bold {
+.widget.contactform form fieldset button.btn.bold {
     font-weight: bold
 }
 

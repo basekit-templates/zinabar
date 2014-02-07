@@ -1112,6 +1112,7 @@ hr.line.align-right {
 }
 
 .widget.tweet a:hover, .tweet a:active {
+  background-image: image('/images/social/socialicons-twitter.png');
   cursor: pointer;
   background-color: @font-swatch7-background-color-hover;
 }
@@ -1138,6 +1139,9 @@ hr.line.align-right {
   text-decoration: none;
   letter-spacing: 1px;
   cursor: pointer;
+  &:hover {
+  	background-color: @font-swatch7-background-color-hover;
+  }
 }
 
 /* ===============================
@@ -1590,7 +1594,7 @@ footer .widget.profile .twitter span {
 .svg .widget.responsiveslideshow .slideshow-widget .btn-prev {
   left: 10px;
   background: image('/images/slideshow-arrow-left.svg') no-repeat center left;
-  background-size: 45px;
+  background-size: contain;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev {
@@ -1600,7 +1604,7 @@ footer .widget.profile .twitter span {
 .svg .widget.responsiveslideshow .slideshow-widget .btn-next {
   right: 10px;
   background: image('/images/slideshow-arrow-right.svg') no-repeat center right; 
-  background-size: 45px;   
+  background-size: contain;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-next {

@@ -15,7 +15,7 @@ a {
     font-family: @font-swatch2-font-family;
     font-size: @font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
-    color: @color-swatch2;
+    color: darken(@color-swatch3, 20%);
     text-decoration: none;
 }
 
@@ -113,7 +113,7 @@ blockquote:before {
 }
 
 .bk-content-text ul, .bk-content-text ol, .bk-content-text li {
-  padding-left: 1.4em; 
+  padding-left: 1.4em;
   text-indent: -1.4em;
 }
 
@@ -131,7 +131,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 /* DEFAULT PAGE TYPE */
 
-.bk-pt-default header {
+.bk-pt-default .bk-header {
     border-bottom: 1px solid  lighten(@color-swatch5,20%);
 }
 
@@ -139,11 +139,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    HEADER
    =============================== */
 
-header {
+.bk-header {
   padding: 0px;
 }
 
-header .header-bg {
+.bk-header .header-bg {
   width: 100%;
   background-color: @color-swatch1;
   padding: 20px 0;
@@ -151,7 +151,7 @@ header .header-bg {
 
 /* SUB NAV */
 
-header nav {
+.bk-header nav {
   width: 100%;
   background-color: @color-swatch7;
 }
@@ -192,7 +192,7 @@ header nav {
    FOOTER
    =============================== */
 
-footer {
+.bk-footer {
     background-color: @color-swatch7;
     padding: 2em 0;
     margin-top: 3em;
@@ -200,10 +200,10 @@ footer {
     text-align: left;
 }
 
-footer h1,
-footer h2,
-footer h3,
-footer h4 {
+.bk-footer h1,
+.bk-footer h2,
+.bk-footer h3,
+.bk-footer h4 {
     color: @color-swatch6;
     padding-bottom: 20px;
 }
@@ -260,7 +260,7 @@ footer h4 {
 
 
 
-nav {
+.bk-nav {
   background-color: @color-swatch7;
 }
 
@@ -337,10 +337,13 @@ nav {
 /* FOLDER */
 
 .widget.extendednavigation ul li.folder {
-    background-image: image('/images/arrow-down.png');
     background-position: right 29px;
     background-repeat: no-repeat;
     cursor: pointer;
+    &:after {
+	    right: 14px;
+		top: 48%;
+    }
 }
 
 .widget.extendednavigation ul li.folder .text:hover {
@@ -417,7 +420,7 @@ nav {
  }
 
 .widget.feature .feature-bgimg {
-  height: 500px; 
+  height: 500px;
  }
 
 .widget.feature .content {
@@ -482,7 +485,7 @@ nav {
   margin: 0;
 }
 
-.widget.feature button:hover 
+.widget.feature button:hover
 {
   background-color: lighten(@color-swatch3,8%);
   color: @font-swatch7-color;
@@ -640,7 +643,7 @@ nav {
 }
 
 
-.widget.button button:hover 
+.widget.button button:hover
 {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
@@ -1023,7 +1026,7 @@ hr.line.align-right {
     text-decoration: none;
     letter-spacing: 1px;
 }
-  
+
 .widget.contactform form fieldset button.btn:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
@@ -1090,7 +1093,7 @@ hr.line.align-right {
 .widget.tweet .tweet{
    margin: 0 0 10px;
    padding: 14px 0;
-   
+
 }
 
 .widget.tweet a {
@@ -1112,7 +1115,7 @@ hr.line.align-right {
 }
 
 .widget.tweet a:hover, .tweet a:active {
-  background-image: image('/images/social/socialicons-twitter.png');
+  background-image: image('/images/social/socialicons-twitter.png') !important;
   cursor: pointer;
   background-color: @font-swatch7-background-color-hover;
 }
@@ -1373,7 +1376,7 @@ hr.line.align-right {
 color: @color-swatch5;
 }
 
-footer .widget.profile .twitter span {
+.bk-footer .widget.profile .twitter span {
   display: inline;
 }
 
@@ -1398,7 +1401,7 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.profile fieldset input {
+.widget.profile form fieldset input {
     height: 40px;
     width: 100%;
     border: none;
@@ -1409,6 +1412,7 @@ footer .widget.profile .twitter span {
     margin-top: 6px;
     margin-bottom: 20px;
     padding: 0;
+    background-color: @color-swatch2;
 }
 
 .widget.profile fieldset input:focus {
@@ -1489,7 +1493,7 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.signupform fieldset input {
+.widget.signupform fieldset input, input[type=search] {
     height: 40px;
     width: 100%;
     border: none;
@@ -1509,7 +1513,7 @@ footer .widget.profile .twitter span {
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.signupform fieldset button.btn {
+.widget.signupform fieldset button.btn, .blog-search-submit-button {
     padding: 16px 22px;
     margin: 0;
     border: 2px solid @color-swatch6;
@@ -1528,6 +1532,10 @@ footer .widget.profile .twitter span {
     cursor: pointer;
 }
 
+.blog-search-form label {
+	display: block;
+}
+
 /* ===============================
    SLIDESHOW WIDGET
    =============================== */
@@ -1536,7 +1544,7 @@ footer .widget.profile .twitter span {
 }
 
 .widget.responsiveslideshow .slideshow-widget {
-     background-color: @color-swatch2; 
+     background-color: @color-swatch2;
 }
 .widget.responsiveslideshow span.inner img {
    width: auto;
@@ -1556,7 +1564,7 @@ footer .widget.profile .twitter span {
     left:0;
     right:0;
     top:auto;
-    background-color: @color-swatch2; 
+    background-color: @color-swatch2;
     text-align: center;
     z-index: 999;
 }
@@ -1583,7 +1591,7 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-prev, 
+.widget.responsiveslideshow .slideshow-widget .btn-prev,
 .widget.responsiveslideshow .slideshow-widget .btn-next {
     font-size: 0;
     z-index: 11;
@@ -1603,12 +1611,12 @@ footer .widget.profile .twitter span {
 
 .svg .widget.responsiveslideshow .slideshow-widget .btn-next {
   right: 10px;
-  background: image('/images/slideshow-arrow-right.svg') no-repeat center right; 
+  background: image('/images/slideshow-arrow-right.svg') no-repeat center right;
   background-size: contain;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-next {
-  background: image('/images/slideshow-arrow-right.png') no-repeat center right;   
+  background: image('/images/slideshow-arrow-right.png') no-repeat center right;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls {
@@ -1627,7 +1635,7 @@ footer .widget.profile .twitter span {
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
     background: image('/images/slideshow-pause.png') center no-repeat;
-    background-size: contain;  
+    background-size: contain;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot
@@ -1656,11 +1664,19 @@ footer .widget.profile .twitter span {
   border-radius: 50px;
 }
 
+.widget.responsiveslideshow .btn-play:after {
+	display: none;
+}
+.widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next {
+    width: 30px;
+    height: 30px
+}
+
 /* ===============================
    IPAD WIDTH
    =============================== */
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
 
 
     .widget.companyheaderwrap {
@@ -1709,7 +1725,7 @@ footer .widget.profile .twitter span {
 
   /* NAV */
 
-  
+
  .widget .extendednavigation ul {
     width: 100%;
     display: none;
@@ -1846,7 +1862,7 @@ footer .widget.profile .twitter span {
 
     /* SLIDESHOW */
 
-    .widget.responsiveslideshow .slideshow-image-list, 
+    .widget.responsiveslideshow .slideshow-image-list,
     .widget.responsiveslideshow .slideshow-widget {
         height:400px;
     }
@@ -1857,22 +1873,22 @@ footer .widget.profile .twitter span {
    IPHONE WIDTH
    =============================== */
 
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
 
-    footer {
+    .bk-footer {
         padding: 2.5em 0 0;
     }
 
-    footer h1, footer h2, footer h3, footer h4 {
+    .bk-footer h1, .bk-footer h2, .bk-footer h3, .bk-footer h4 {
         padding-bottom: 20px;
     }
 
-    footer .footer2 {
+    .bk-footer .footer2 {
         padding: 2em 0;
         margin-top: 3em;
     }
 
-    footer .footer2 .columns-two-right {
+    .bk-footer .footer2 .columns-two-right {
         text-align: left;
     }
 
@@ -1900,14 +1916,14 @@ footer .widget.profile .twitter span {
         font-size: bkscale(@font-swatch8-font-size,0.6);
         line-height: bkscale(@font-swatch8-line-height,0.6);
         color: darken(@color-swatch3,10%);
-        padding: 0 10px;  
-  
+        padding: 0 10px;
+
     }
 
     .widget.feature h3 {
         font-size: bkscale(@font-swatch9-font-size,0.65);
         line-height: bkscale(@font-swatch9-line-height,0.67);
-        padding: 0 10px;     
+        padding: 0 10px;
     }
 
     .widget.feature .feature-btn {
@@ -1969,7 +1985,7 @@ footer .widget.profile .twitter span {
     text-align: justify;
   }
 
-  .widget.clicktocall a.italic { 
+  .widget.clicktocall a.italic {
     font-style: italic;
   }
 
@@ -2010,7 +2026,7 @@ footer .widget.profile .twitter span {
 
 }
 
-@media only screen and (min-width: 1140px) { 
+@media only screen and (min-width: 1140px) {
     .wrapper {
         width: 960px;
         /* 1140px - 10% for margins */

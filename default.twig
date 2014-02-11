@@ -4,8 +4,8 @@
 
 <div class="bk-pt-default">
 
- <header>
-        <nav>
+ <header class="bk-header">
+        <nav class="bk-nav">
         <div class="wrapper clearfix">
             {{widget('extendednavigation', 'navigationheader', {})|raw}}
         </div>
@@ -20,9 +20,9 @@
 
 <div class="main wrapper clearfix">
     {{zone('main')|raw}}
-</div>  
+</div>
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-two-50-50">
            <div class="column columns-two-left">
@@ -32,7 +32,7 @@
            <div class="column columns-two-right">
                 {{widget('content', 'footercolumn2content1', {"content":"<h3>Pulvinar Vitae</h3>"})|raw}}
                 {{widget('profile', 'footercolumn2profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
-                {{widget('profile', 'footercolumn2profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+                {{widget('profile', 'footercolumn2profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}}
            </div>
         </div>
     </div>

@@ -3,8 +3,8 @@
 {% block content %}
 
 
-<header>
-        <nav>
+<header class="bk-header">
+        <nav class="bk-nav">
         <div class="wrapper clearfix">
             {{widget('extendednavigation', 'navigationheader', {})|raw}}
         </div>
@@ -17,7 +17,7 @@
     </div>
 </header>
 
-<section>
+<section class="bk-section">
   {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
 </section>
 
@@ -26,7 +26,7 @@
 </div>  
 
 
-<footer>
+<footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-two-50-50">
            <div class="column columns-two-left">

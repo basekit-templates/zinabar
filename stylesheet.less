@@ -338,7 +338,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 /* FOLDER */
 
 .widget.extendednavigation ul li.folder {
-    //background-image: image('/images/arrow-down.png');
     background-position: right 29px;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -350,7 +349,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .widget.extendednavigation ul li.folder .text:hover {
     color: @font-swatch6-color-hover;
-    //background-image: image('/images/arrow-down.png');
     background-position: right 29px;
     background-repeat: no-repeat;
 }
@@ -359,8 +357,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   background-image: none;
 }
 .widget .extendednavigation ul li.folder:after {
-	right: 12px;
-	top: 49%;
+  right: 14px;
+  top: 44%;
 }
 
 /* DROPDOWN MENU */
@@ -1977,6 +1975,18 @@ color: @color-swatch5;
     .widget.responsiveslideshow .slideshow-widget {
         height:400px;
     }
+    .widget .extendednavigation ul li:first-child {
+      margin-top:40px;
+    }
+
+    .widget .extendednavigation ul li.folder ul li {
+      margin-top:0;
+    }
+
+    .widget .extendednavigation ul.align-right li.folder:after {
+      left: 5px;
+      right: inherit;
+  }
 
 }
 

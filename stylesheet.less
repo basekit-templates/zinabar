@@ -1644,7 +1644,6 @@ color: @color-swatch5;
     text-indent: 8px;
     margin-top: 6px;
     margin-bottom: 20px;
-    float:left;
     padding: 0;
 }
 
@@ -1842,6 +1841,10 @@ color: @color-swatch5;
 	border-bottom: 1px solid darken(@color-swatch1, 20%);
 }
 
+.widget.ecombasket {
+	margin-bottom: 20px;
+}
+
 .widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-image {
 	width: 95px;
 	height: 95px;
@@ -1870,9 +1873,8 @@ color: @color-swatch5;
 	float: left;
 	margin: 0 0 20px;
 	input[type=search] {
-		padding-right: 90px;
+		padding-right: 100px;
 		box-sizing: border-box;
-		width: 100%;
 	}
 	button {
 		position: absolute;
@@ -1889,7 +1891,6 @@ label {
 select {
 	cursor: pointer;
 	position: relative;
-	margin-bottom: 12px;
 	padding-right: 33px;
 }
 
@@ -1917,14 +1918,17 @@ select, input[type=search] {
 }
 
 .productlist-display-form {
+	text-align: right;
 	input[type=search] {
 		margin: 0;
 	}
 	label {
+		vertical-align: bottom;
+		text-align: left;
 		display: inline-block;
 		width: 19%;
 	}
-	select {
+	select, input[type=search] {
 		width: 80%;
 	}
 }
@@ -2329,7 +2333,7 @@ select, input[type=search] {
     
     // Ecommerce
     .productlist-display-form {
-		select, label {
+		select, input[type=search], label {
 			width: 100%;
 		}
 	}

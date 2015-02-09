@@ -592,6 +592,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
+    .more, .less {
+      color: @font-swatch7-color;
+    }
 }
 
 .widget.content span.expand:hover,
@@ -862,7 +865,7 @@ input[type=search] {
 
 .basket-summary-quantitybtn,
 .widget.ecombasket .ecombasket-list-container ul li,
-.widget.profile fieldset, 
+.widget.profile fieldset,
 .widget.signupform fieldset,
 .widget.paypalbuynow,
 .blog-post-sharing,
@@ -1987,7 +1990,7 @@ select, input[type=search] {
   .widget .extendednavigation ul li {
     width: 100%;
     padding: 0;
-   
+
   }
 
   .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
@@ -2101,13 +2104,13 @@ select, input[type=search] {
 @media only screen and (max-width: 480px) {
 
 	// BLOG
-	
+
 	.blog-post-feature-image-wrap {
 		width: 100%;
 	}
-	
+
 	// FORMS
-	
+
 	form {
 		input[type=search] {
 			margin-bottom: 10px;
@@ -2251,7 +2254,7 @@ select, input[type=search] {
     display:none;
   }
 
-  .widget.responsiveslideshow .slideshow-image-item, 
+  .widget.responsiveslideshow .slideshow-image-item,
   .widget.responsiveslideshow .slideshow-widget {
       height: 200px;
   }
@@ -2267,7 +2270,7 @@ select, input[type=search] {
       width: 50%;
       padding-bottom: 50%;
     }
-    
+
     .widget.responsiveslideshow .slideshow-image-list.crop span.inner.square,
     .widget.responsiveslideshow .slideshow-image-list.crop span.inner.portrait,
     .widget.responsiveslideshow .slideshow-image-list.crop span.inner.landscape {
@@ -2280,7 +2283,7 @@ select, input[type=search] {
     .widget.twitter .twitter-profile-pic {
 	    display: none;
     }
-    
+
     // Ecommerce
     .productlist-display-form {
 		select, input[type=search], label {

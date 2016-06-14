@@ -1,7 +1,7 @@
 {
 	"name":"Zinabar",
 	"thumbnail":"zinabar.png",
-	"screenshot":"zinabar.png",
+	"screenshot":"zinabar-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes":["home"],
     "tags": {

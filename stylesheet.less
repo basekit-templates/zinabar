@@ -651,7 +651,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    BUTTON CSS
    =============================== */
 
-.widget.button button, .btn
+.widget.button button, .btn, .advancedcontactform fieldset button
 {
   padding: 16px 22px;
   margin: 0;
@@ -992,23 +992,31 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* ===============================
-   CONTACT FORM WIDGET
+   CONTACT FORM AND ADVANCED FORM
    =============================== */
 
-.widget.contactform form {
+.widget.contactform form,
+.advancedcontactform form {
     display: block;
     margin-bottom: 20px;
     background-color: @color-swatch1;
 }
 
-.widget.contactform form fieldset {
+.widget.contactform form fieldset,
+.advancedcontactform fieldset {
     border: none;
     padding: 0;
 }
 
-.widget.contactform form fieldset label {
+.widget.contactform form fieldset label,
+.advancedcontactform .form-group>label {
     width: 100%;
     float: left;
+  }
+
+.widget.contactform form fieldset label,
+.advancedcontactform .form-group>label,
+.advancedcontactform .option-list .option-item .label {
     font-family:@font-swatch5-font-family;
     font-size:@font-swatch5-font-size;
     font-weight:@font-swatch5-font-weight;
@@ -1017,7 +1025,10 @@ input[type="search"]::-webkit-search-decoration {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.contactform form fieldset input {
+.widget.contactform form fieldset input,
+.advancedcontactform form input[type=email], 
+.advancedcontactform form input[type=text],
+.advancedcontactform form select {
     height: 40px;
     width: 100%;
     //border: none;
@@ -1031,12 +1042,14 @@ input[type="search"]::-webkit-search-decoration {
     //padding: 0;
 }
 
-.widget.contactform form fieldset input:focus {
+.widget.contactform form fieldset input:focus,
+.advancedcontactform form input:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform form fieldset textarea {
+.widget.contactform form fieldset textarea,
+.advancedcontactform fieldset textarea {
     height: 100px;
     width: 100%;
     //border: none;
@@ -1052,12 +1065,14 @@ input[type="search"]::-webkit-search-decoration {
     //padding: 0;
 }
 
-.widget.contactform form fieldset textarea:focus {
+.widget.contactform form fieldset textarea:focus,
+.advancedcontactform fieldset textarea:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform form fieldset button.btn {
+.widget.contactform form fieldset button.btn,
+.advancedcontactform fieldset button {
     //padding: 16px 22px;
     margin: 0;
     border: 2px solid @color-swatch6;
@@ -1098,6 +1113,11 @@ input[type="search"]::-webkit-search-decoration {
 .widget.contactform form fieldset button.btn.bold {
     font-weight: bold
 }
+
+.advancedcontactform .option-list {
+  padding: 1em 0;
+}
+
 
 /* ===============================
    REDIRECT WIDGET

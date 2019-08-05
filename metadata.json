@@ -4,6 +4,7 @@
 	"screenshot":"zinabar-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes":["home"],
+    "versionTenCompatible": 1,
     "tags": {
     "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "restaurant", "sans-serif", "bar", "coffee shop", "cafe"],
     "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "restaurante", "sans-serif", "bar", "cafetería"],

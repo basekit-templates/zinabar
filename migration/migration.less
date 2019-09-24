@@ -5,11 +5,10 @@
 
 #migrated-site {
 
+    @container-width: 960px;
 
     // Stylseheet overrides
     // -----------------------------
-
-
     // Template wrapper (replace with corresponding template classes)
     .main.wrapper {
         width: 100%;
@@ -27,19 +26,48 @@
         overflow: inherit;
     }
 
+    .bk-footer {
+        margin-top: 0;
+    }
 
+    &.edit {
+        .widget__list {
+            background-color: transparent;
+
+            li {
+                background-color: #fff;
+                border-bottom: 1px solid rgba(0, 136, 252, 0.6);
+            }
+        }
+
+        .row-overlay__button-controls button:disabled {
+            background-color: transparent;
+        }
+
+        .wrapper:not(.main) {
+            // overwrite the existing one otherwise it won't work properly in v10s editor
+            @media only screen and (min-width: 1140px) {
+                width: 90%;
+                margin: 0 5%;
+            }
+
+            @media only screen and (min-width: 1340px) {
+                width: @container-width;
+                margin: 0 auto;
+            }
+        }
+    }
 
 
     // Migration styles
     // -----------------------------
-
-
     // Replace with corresponding template values
-    @container-width: 960px;
-
     @spacing__first--desktop: 2em;
     @spacing__first--tablet:  2em;
     @spacing__first--mobile:  2em;
+    @spacing__last--desktop: 5em;
+    @spacing__last--tablet:  5em;
+    @spacing__last--mobile:  5em;
 
     @spacing--other: 30px;
 
@@ -72,13 +100,13 @@
 
     // Move spacing to last widget in the main zone (not sections)
     #page-zones__main > .widget:not(.row):last-child {
-        margin-bottom: @spacing__first--desktop;
+        margin-bottom: @spacing__last--desktop;
 
         @media @tablet {
-            margin-bottom: @spacing__first--tablet;
+            margin-bottom: @spacing__last--tablet;
         }
         @media @mobile {
-            margin-bottom: @spacing__first--mobile;
+            margin-bottom: @spacing__last--mobile;
         }
     }
 
@@ -97,12 +125,8 @@
 
     // Adds spacing to the section when a widget is before it
     #page-zones__main > .widget:not(.row) + .row {
-        margin-bottom: @spacing--other;
+        margin-bottom: 0;
         margin-top: @spacing--other;
-
-        &:not(:last-child) {
-            margin-bottom: 0;
-        }
     }
 
 
